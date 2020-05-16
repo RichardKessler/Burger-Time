@@ -6,7 +6,38 @@
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
+                <div>
+                    <form>
+                        <input type="hidden" value={{id}}>
+                        <button type="submit" class="btn btn-success">Devour</button>
+                    </form>
+                </div>
+                {{/unless}}
+                {{/each}}
             </ul>
         </div>
+        
+        <div class="col-md-6">
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <div>
+                    <form>
+                        <input type="text" placeholder={{burger_name}}>
+                    </form>
+                </div>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+        <form>
+            <input type="Burger" class="form-control" id='Add Burger'>
+            <button type='submit'>Add Burger</button>
+        </form>
     </div>
 </div>
