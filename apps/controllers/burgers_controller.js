@@ -7,7 +7,7 @@ const burger = require('../models/burger.js');
 // Create all the routes and set up logic withing those routes where required
 // Route to display all burgers using handlebars
 router.get('/', (req, res) => {
-    burger.sellectAll((data) => {
+    burger.selectAll((data) => {
         let hbsObject = {
             burger: data
         };

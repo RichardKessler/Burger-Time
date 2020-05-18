@@ -3,29 +3,22 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
+            Do you want to eat these burgers?!?!?!
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <div>
-                    <form>
-                        <input type="hidden" value={{id}}>
-                        <button type="submit" class="btn btn-success">Devour</button>
-                    </form>
-                </div>
+                <p>{{burger_name}} <button type="submit" class="devour btn btn-success" data-id="{{id}}">Devour!!!</button></p>
                 {{/unless}}
                 {{/each}}
             </ul>
         </div>
         
         <div class="col-md-6">
+            Burgers you have already eaten!!!!
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                <div>
-                    <form>
-                        <input type="text" placeholder={{burger_name}}>
-                    </form>
-                </div>
+                <p>{{burger_name}}</p>
                 {{/if}}
                 {{/each}}
             </ul>
@@ -34,10 +27,13 @@
 </div>
 
 <div class="container">
-    <div class="form-group">
-        <form>
-            <input type="Burger" class="form-control" id='Add Burger'>
-            <button type='submit'>Add Burger</button>
-        </form>
-    </div>
+    <h3>Add a burger</h3>
+    <form class="creat-form">
+        <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" id="ca" name="name">
+        </div>
+
+        <button type="submit">Add Burger</button>
+    </form>
 </div>
