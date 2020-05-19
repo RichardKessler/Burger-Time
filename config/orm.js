@@ -42,7 +42,7 @@ const orm = {
     },
 
     insertOne: (table, cols, vals, cb) => {
-        const query = 'INSERT INTO ' + table;
+        let query = 'INSERT INTO ' + table;
 
         query += ' (';
         query += cols.toString();
@@ -61,7 +61,7 @@ const orm = {
 
     // An example of objColVals would be {name: Richard, student: true}
     updateOne: (table, objColVals, condition, cb) => {
-        const query = 'UPDATE ' + table;
+        let query = 'UPDATE ' + table;
 
         query += ' SET ';
         query += objToSql(objColVals);

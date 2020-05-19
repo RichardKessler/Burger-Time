@@ -9,7 +9,7 @@ const burger = require('../models/burger.js');
 router.get('/', (req, res) => {
     burger.selectAll((data) => {
         let hbsObject = {
-            burger: data
+            burgers: data
         };
         console.log(hbsObject);
         res.render('index', hbsObject);
@@ -20,6 +20,7 @@ router.get('/', (req, res) => {
 router.post('/api/burgers', (req, res) => {
     burger.insertOne(['burger_name', 'devoured'], [req.body.name, false], (result) => {
         res.json({ id: result.insertId });
+        // res.redirect('/')
     });
 });
 
