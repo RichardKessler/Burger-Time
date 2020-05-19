@@ -1,12 +1,11 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
-    $(".devour").on("click", (event) => {
-       var id = $(this).attr('data-id');
-      // var burger_id = $(this).children(".id").val();
-      // console.log('id', burger_id);
-       var eaten = $(this).data("eaten");
+    $(".devour").on("click", function(event) {
+      event.preventDefault();
+       let id = $(this).attr('data-id');
+       let eaten = $(this).data("eaten");
 
-       var eaten = {
+       let eaten = {
            devoured: true
     };
 
