@@ -3,7 +3,7 @@ $(() => {
     $(".devour").on("click", function(event) {
       event.preventDefault();
        let id = $(this).attr('data-id');
-       let eaten = $(this).data("eaten");
+       
 
        let eaten = {
            devoured: true
