@@ -1,3 +1,11 @@
-body{
+body {
     background-color: darkorange;
+}
+
+h1 {
+    text-align: center;
+}
+
+#adding {
+    justify-content: center;
 }
